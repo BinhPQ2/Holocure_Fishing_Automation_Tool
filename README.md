@@ -1,7 +1,7 @@
-# holofishing
+# Holocure Fishing Automation Tool
 Bot for fishing in Holocure
 
-Hardcoded for 1920x1080 fullscreen.
+Hardcoded for 1920x1080 full-screen.
 
 Hardcoded for WASD + SPACE controls.
 
