@@ -3,6 +3,7 @@ import cv2 as cv
 import numpy as np
 import pydirectinput as di
 import keyboard
+import os 
 
 
 class FishingBot:
@@ -10,6 +11,7 @@ class FishingBot:
         self.running = False
         self.threshold = 0.8
         self.setup_hotkeys()
+        self.assets_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets')
 
     def toggle_running(self):
         self.running = not self.running
@@ -22,12 +24,12 @@ class FishingBot:
         keyboard.add_hotkey('o', self.toggle_running)
 
     def run(self):
-        INDICATOR = cv.imread('./assets/indicator.png', cv.IMREAD_GRAYSCALE)
-        UP = cv.imread('./assets/up.png', cv.IMREAD_GRAYSCALE)
-        DOWN = cv.imread('./assets/down.png', cv.IMREAD_GRAYSCALE)
-        LEFT = cv.imread('./assets/left.png', cv.IMREAD_GRAYSCALE)
-        RIGHT = cv.imread('./assets/right.png', cv.IMREAD_GRAYSCALE)
-        CIRCLE = cv.imread('./assets/circle.png', cv.IMREAD_GRAYSCALE)
+        INDICATOR = cv.imread(os.path.join(self.assets_path, 'indicator.png'), cv.IMREAD_GRAYSCALE)
+        UP = cv.imread(os.path.join(self.assets_path, 'up.png'), cv.IMREAD_GRAYSCALE)
+        DOWN = cv.imread(os.path.join(self.assets_path, 'down.png'), cv.IMREAD_GRAYSCALE)
+        LEFT = cv.imread(os.path.join(self.assets_path, 'left.png'), cv.IMREAD_GRAYSCALE)
+        RIGHT = cv.imread(os.path.join(self.assets_path, 'right.png'), cv.IMREAD_GRAYSCALE)
+        CIRCLE = cv.imread(os.path.join(self.assets_path, 'circle.png'), cv.IMREAD_GRAYSCALE)
 
         while True:
             if self.running:
