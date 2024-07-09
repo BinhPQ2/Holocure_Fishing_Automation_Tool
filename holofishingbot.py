@@ -22,12 +22,12 @@ class FishingBot:
         keyboard.add_hotkey('o', self.toggle_running)
 
     def run(self):
-        INDICATOR = cv.imread('assets/indicator.png', cv.IMREAD_GRAYSCALE)
-        UP = cv.imread('assets/up.png', cv.IMREAD_GRAYSCALE)
-        DOWN = cv.imread('assets/down.png', cv.IMREAD_GRAYSCALE)
-        LEFT = cv.imread('assets/left.png', cv.IMREAD_GRAYSCALE)
-        RIGHT = cv.imread('assets/right.png', cv.IMREAD_GRAYSCALE)
-        CIRCLE = cv.imread('assets/circle.png', cv.IMREAD_GRAYSCALE)
+        INDICATOR = cv.imread('./assets/indicator.png', cv.IMREAD_GRAYSCALE)
+        UP = cv.imread('./assets/up.png', cv.IMREAD_GRAYSCALE)
+        DOWN = cv.imread('./assets/down.png', cv.IMREAD_GRAYSCALE)
+        LEFT = cv.imread('./assets/left.png', cv.IMREAD_GRAYSCALE)
+        RIGHT = cv.imread('./assets/right.png', cv.IMREAD_GRAYSCALE)
+        CIRCLE = cv.imread('./assets/circle.png', cv.IMREAD_GRAYSCALE)
 
         while True:
             if self.running:
